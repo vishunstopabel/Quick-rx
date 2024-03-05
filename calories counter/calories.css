@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+  background: rgb(35,63,245);
+  background: linear-gradient(90deg, rgba(35,63,245,1) 18%, rgba(61,117,236,1) 44%, rgba(39,134,233,1) 58%, rgba(59,173,237,1) 73%);
+}
+
+/* .light{
+    background: rgb(177,253,255);
+    background: ;linear-gradient(90deg, rgba(177,253,255,1) 0%, rgba(67,220,228,1) 41%, rgba(70,233,242,1) 69%, rgba(4,164,198,1) 89%)
+} */
+.wrap{
+    width: 98vw;
+    height: 98vh;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.099);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 1);
+
+}
+.inputbox{
+    display: flex;
+    width: 90vw;
+    height: 10vh;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0 0 20px;
+}
+
+
+.inputiteam,.quntity{
+    font-size: 1.4rem;
+    padding: 8px;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    height: 33px;
+    color: #ffffff;
+  }
+ 
+.inputiteam.quntity::placeholder{
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+.submit{
+    font-size: 17px;
+    padding: 0.7em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: rgb(11, 21, 60);
+    color: white;
+    border-radius: 10px;
+
+   }
+   
+   .submit:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+   }
+.submit:active {
+    transform: translate(0, 2px);
+   }
+
+
+
+  .mainbox{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  display: none;
+  height: 45vh;
+  width: 96vw;
+  overflow-x: auto;
+  gap: 30px;
+  scroll-behavior: smooth;
+  }
+  .mainbox::-webkit-scrollbar{
+    -webkit-appearance: none;
+  }
+  .smallbox{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .bigbox{
+    display: flex;
+    flex-direction: row;
+    /* width: 350px; */
+  }
+  .smallbox{
+    display: flex;
+   
+  }
+  .bigbox>div,.smallbox>div{
+    height: 150px;
+    width: 150px;
+    margin: 10px 0 0 25px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 58px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18.1px);
+    -webkit-backdrop-filter: blur(18.1px);
+    border: 1px solid rgba(255, 255, 255, 0.93);
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: #f0f0f0;
+  }
+  .smallbox>div{
+    height: 61px;
+    width: 173px;
+    font-size: 1.2rem;
+  }
+  .reload{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.618);
+    border-top:3px solid #0000ff;
+    transition: smooth;
+    animation:reload 0.4s  infinite;
+    
+  
+}
+.reloadbox{
+    /* background-color: #000000; */
+     width: 99vw;
+    height: 100vh;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+.reloadbox>p{
+    color: #f0f0f0;
+}
+.change{
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes reload {
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);  
+    }
+    
+}
+.title{
+  font-size: 15rem;
+  color: #ffffff;
+  opacity: 0.6;
+  z-index: -1;
+  position: absolute;
+  top: 16%;
+  left: 2%;
+}
+.box{
+  height: 400px;
+  width: 400px;
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.4px);
+  -webkit-backdrop-filter: blur(9.4px);
+}
+.bright{
+  position: absolute;
+  right: 0;
+  top: 25%;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+  padding: 9px;
+  z-index: 999;
+  display: none;
+  color: #000000;
+  font-size: 1.6rem;
+}
+
+.bleft{
+  position: absolute;
+  left: 0;
+  top: 25%;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+  padding: 9px;
+  z-index: 999;
+  display: none;
+  color: #000000;
+  font-size: 1.6rem;
+}
+.tmainbox{
+  display: none;
+  height: 40vh;
+  width: 96vw;
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
+  gap: 30px;
+  align-content: flex-end;
+  display: none;
+}
+.totalcalories{
+  height: 300px;
+  width: 150px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  display: flex;
+  color: #f0f0f0;
+  flex-direction: column;
+  position: relative;
+}
+  .caloriesbar{
+    transition: all 2s ease-in;
+    width: 150px;
+    background-color: #6fe797;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0%;
+    transition: all 2s ease-in;
+  
+  }
+  .calories{
+    
+    font-size: 1.3rem;
+    color: #f0f0f0;
+    z-index: 999;
+    background-color: transparent;
+    position: absolute;
+    top: 25%;
+  }
+  .tsmallbox{
+    flex-wrap: wrap;
+    display: flex;
+    width: 40vw;
+    height: 20vh;
+    gap: 5px;
+  }
+  .tsmallbox>div{
+    width: 200px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.16);
+     border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.3px);
+    -webkit-backdrop-filter: blur(7.3px);
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+  }
+  .iteams{
+    width: 150px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.16);
+     border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.3px);
+    -webkit-backdrop-filter: blur(7.3px);
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+  .iteams::before{
+    content: "iteams";
+    color: #ffffff;
+    font-size: 2rem;
+  }
+  .iteams>div{
+    font-size: 1.5rem;
+    color: #f0f0f0;
+  }
+  .tsmallbox>div{
+    font-size: 1.5rem;
+    color:#f0f0f0;
+  }
+  
+@media (max-width:1130px) {
+  .title{
+    font-size: 3rem;
+  }
+  .bigbox>div{
+    height: 133px;
+    width: 126px;
+    border-radius: 35px;
+    font-size: 1.2rem;
+  
+}
+.smallbox>div {
+  height: 59px;
+  width: 173px;
+  font-size: 1.2rem;
+}
+.tmainbox{
+height: 850px;
+align-content: flex-start;
+justify-content: space-between;
+}
+
+.tsmallbox>div{
+  height:90px;
+  width:150px;
+}
+.iteams{
+  width: 100px;
+  height: 250px;
+}
+.totalcalories{
+  width:150px;
+  height: 250px;
+}
+.caloriesbar{
+  width:150px;
+}
+.wrap{
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+}
+
+}
