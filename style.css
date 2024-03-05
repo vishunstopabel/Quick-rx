@@ -812,5 +812,13 @@ height: 200px;
         height: 267px;
         z-index: -1;
       }
+      .terms_and_condition>div>ul>li {
+        font-size: 1rem;
+        
+    }
+    .terms_and_condition>p {
+      font-size: 4rem;
+    
+  }
     
   }
