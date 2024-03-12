@@ -54,13 +54,13 @@ position: relative;
 display: inline;
 }
 .minibox:hover{
-    background-color: #ea2c2cc0;
+    background-color: #ffffffd1;
 }
 .minibox:active{
-    background-color: #ea2c2cc0;
+    background-color: #ffffffd1;
 }
 .minibox:focus{
-    background-color: #ea2c2cc0;
+    background-color: #ffffffd1;
 }
 .gg-chevron-right-r {
     box-sizing: border-box;
