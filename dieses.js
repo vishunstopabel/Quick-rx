@@ -200,7 +200,128 @@
         otcMedicine: ["Moisturizers", "Topical corticosteroids", "Coal tar products"],
       }
   ];
-  
+ const commontabelets={
+  paracetamol: {
+    name: "Paracetamol",
+    description: "Analgesic (pain reliever) and antipyretic (fever reducer)",
+    uses: ["Fever", "Headache", "Muscle pain", "Minor aches and pains"],
+  },
+  ibuprofen: {
+    name: "Ibuprofen",
+    description: "Nonsteroidal anti-inflammatory drug (NSAID)",
+    uses: ["Fever", "Pain", "Inflammation", "Menstrual cramps"],
+  },
+  aspirin: {
+    name: "Aspirin",
+    description: "Nonsteroidal anti-inflammatory drug (NSAID) and antiplatelet",
+    uses: ["Pain", "Fever", "Inflammation", "Heart attack prevention"],
+  },
+  cetirizine: {
+    name: "Cetirizine",
+    description: "Antihistamine",
+    uses: ["Allergy symptoms", "Hay fever", "Hives", "Itchy skin"],
+  },
+  omeprazole: {
+    name: "Omeprazole",
+    description: "Proton pump inhibitor (PPI)",
+    uses: ["Heartburn", "Acid reflux", "Gastric ulcers", "Gastroesophageal reflux disease (GERD)"],
+  },
+  loratadine: {
+    name: "Loratadine",
+    description: "Antihistamine",
+    uses: ["Allergy symptoms", "Hay fever", "Itchy eyes", "Runny nose"],
+  },
+  simvastatin: {
+    name: "Simvastatin",
+    description: "Statins (cholesterol-lowering medication)",
+    uses: ["High cholesterol", "Prevention of cardiovascular diseases"],
+  },
+  metformin: {
+    name: "Metformin",
+    description: "Oral antidiabetic medication (biguanide)",
+    uses: ["Type 2 diabetes", "Insulin resistance", "Polycystic ovary syndrome (PCOS)"],
+  },
+  naproxen: {
+    name: "Naproxen",
+    description: "Nonsteroidal anti-inflammatory drug (NSAID)",
+    uses: ["Pain relief", "Inflammation", "Fever", "Menstrual cramps"],
+  },
+  amoxicillin: {
+    name: "Amoxicillin",
+    description: "Antibiotic (penicillin)",
+    uses: ["Bacterial infections", "Ear infections", "Respiratory tract infections", "Urinary tract infections"],
+  },
+  ranitidine: {
+    name: "Ranitidine",
+    description: "H2 blocker (histamine-2 receptor antagonist)",
+    uses: ["Heartburn", "Acid reflux", "Gastric ulcers", "Gastroesophageal reflux disease (GERD)"],
+  },
+  metoprolol: {
+    name: "Metoprolol",
+    description: "Beta blocker",
+    uses: ["Hypertension", "Angina", "Heart failure", "Prevention of heart attacks"],
+  },
+  ciprofloxacin: {
+    name: "Ciprofloxacin",
+    description: "Antibiotic (fluoroquinolone)",
+    uses: ["Bacterial infections", "Urinary tract infections", "Respiratory tract infections", "Skin infections"],
+  },
+  sertraline: {
+    name: "Sertraline",
+    description: "Selective serotonin reuptake inhibitor (SSRI) antidepressant",
+    uses: ["Depression", "Anxiety disorders", "Obsessive-compulsive disorder (OCD)", "Post-traumatic stress disorder (PTSD)"],
+  },
+  atorvastatin: {
+    name: "Atorvastatin",
+    description: "Statins (cholesterol-lowering medication)",
+    uses: ["High cholesterol", "Prevention of cardiovascular diseases"],
+  },
+  levothyroxine: {
+    name: "Levothyroxine",
+    description: "Synthetic thyroid hormone",
+    uses: ["Hypothyroidism", "Thyroid cancer", "Goiter"],
+  },
+  prednisone: {
+    name: "Prednisone",
+    description: "Corticosteroid",
+    uses: ["Inflammatory conditions", "Allergic reactions", "Autoimmune disorders", "Asthma exacerbations"],
+  },
+  metronidazole: {
+    name: "Metronidazole",
+    description: "Antibiotic (nitroimidazole)",
+    uses: ["Bacterial infections", "Protozoal infections", "Dental infections", "Helicobacter pylori eradication"],
+  },
+  albuterol: {
+    name: "Albuterol",
+    description: "Short-acting beta agonist (SABA) bronchodilator",
+    uses: ["Asthma", "Chronic obstructive pulmonary disease (COPD)", "Bronchospasm"],
+  },
+  lisinopril: {
+    name: "Lisinopril",
+    description: "Angiotensin-converting enzyme (ACE) inhibitor",
+    uses: ["Hypertension", "Heart failure", "Kidney protection in diabetes"],
+  },
+  diphenhydramine: {
+    name: "Diphenhydramine",
+    description: "Antihistamine",
+    uses: ["Allergy symptoms", "Motion sickness", "Insomnia", "Itchy skin"],
+  },
+  furosemide: {
+    name: "Furosemide",
+    description: "Loop diuretic",
+    uses: ["Edema", "Hypertension", "Congestive heart failure", "Kidney disorders"],
+  },
+  clopidogrel: {
+    name: "Clopidogrel",
+    description: "Antiplatelet agent",
+    uses: ["Prevention of blood clots", "Reducing the risk of heart attack or stroke"],
+  },
+  fluoxetine: {
+    name: "Fluoxetine",
+    description: "Selective serotonin reuptake inhibitor (SSRI) antidepressant",
+    uses: ["Depression", "Anxiety disorders", "Bulimia nervosa", "Obsessive-compulsive disorder (OCD)"],
+  },
+  }
 let select1=document.querySelector("#symptoms1")
 let select2=document.querySelector("#symptoms2")
 let select3=document.querySelector("#symptoms3")
