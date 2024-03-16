@@ -434,7 +434,18 @@ const commontabelets={
     uses: ["Depression", "Anxiety disorders", "Bulimia nervosa", "Obsessive-compulsive disorder (OCD)"],
   },
   }
-  let momosym=[]
-  commontabelets.forEach((e)=>{
-    console.log(e.uses)
+  let monosym=[]
+Object.values(commontabelets).forEach((w)=>{
+           w.uses.forEach((e)=>{
+            monosym.push(e)
+           })
+  });
+
+  let newmonosym=[]
+  monosym.forEach((e)=>{
+    if(!newmonosym.includes(e)){
+      newmonosym.push(e)
+    }
   })
+  console.log(monosym.length)
+  console.log(newmonosym.length)
