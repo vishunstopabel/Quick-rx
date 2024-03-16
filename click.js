@@ -21,3 +21,11 @@ document.querySelector("#burger").addEventListener("click",()=>{
         newcurrent=true
     }
 })
+document.querySelector(".butt_single").addEventListener("click",()=>{
+    document.querySelector(".single_symptom").style.display="flex"
+    document.querySelector(".select").style.display="none"
+})
+document.querySelector(".butt_multi").addEventListener("click",()=>{
+    document.querySelector(".formpage").style.display="flex"
+    document.querySelector(".select").style.display="none"
+})

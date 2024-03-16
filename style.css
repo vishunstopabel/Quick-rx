@@ -742,7 +742,9 @@ height: 200px;
     position: relative;
     bottom: -60px;
   }
-
+  .formpage{
+    display: none;
+  }
 @media  (max-width:1130px) {
     .burger{
         display: flex;
@@ -841,6 +843,4 @@ height: 200px;
   }
     
   }
-  .formpage{
-    display: none;
-  }
+  

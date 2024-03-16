@@ -234,7 +234,7 @@ array.sort().forEach((a,index)=>{
 
 form.addEventListener("submit",(e)=>{
   e.preventDefault();
-  
+  document.querySelector(".result").style.display="flex"
   let Array=[]
   Array[0]=select1.value
   Array[1]=select2.value
@@ -449,6 +449,7 @@ Object.values(commontabelets).forEach((w)=>{
     e.preventDefault()
     result.childNodes[1].innerHTML="you can take "
     result.childNodes[3].innerHTML="discription"
+    document.querySelector(".result").style.display="flex"
     let singlesym=single_select.value
     Object.values(commontabelets).map((e)=>{
       if(e.uses.includes(singlesym)){
