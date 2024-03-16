@@ -6,13 +6,6 @@ document.querySelector(".suggestionsi").addEventListener("focus",()=>{
 document.querySelector(".suggestionsi").addEventListener("blur",()=>{
     butt.style.display="none"
 })
-
-
-   
-   
-
-
-
 let newcurrent=true
 document.querySelector("#burger").addEventListener("click",()=>{
     if(newcurrent==true){

@@ -217,13 +217,13 @@ diseases.forEach((a)=>{
 }}
 })
 console.log(arry.length)
-select(select1)
-select(select2)
-select(select3)
-select(select4)
+select(select1,arry)
+select(select2,arry)
+select(select3,arry)
+select(select4,arry)
 
-function select(select){
-arry.sort().forEach((a,index)=>{
+function select(select,array){
+array.sort().forEach((a,index)=>{
   let option=document.createElement("option")
   // option.value=index
   option.innerHTML=a
@@ -267,11 +267,10 @@ function removeduplicat(Array){
       return array;
 }
 
-//
+
 function doctor(array){
   let testd=[]
   let finish=[]
-// console.log(array)
   diseases.forEach((a)=>{
     for(i=0;i<array.length;i++){
         if(a.symptoms.includes(array[i])){
@@ -281,11 +280,8 @@ function doctor(array){
 
   })
   testd.sort()
-  // console.log(testd)
 for(i=0;i<testd.length;i++){
-
   if(testd[i]==testd[i+1]){
-
     if(!finish.includes(testd[i])){
       finish.push(testd[i])
     }
@@ -304,7 +300,6 @@ else{
 
 function displaydisese(array) {
   diseases.forEach((a)=>{
-    // console.log(a.name)
      if(array[0]==a.name){
       result.childNodes[1].innerHTML=`you may have ${a.name} and you can take`
       result.childNodes[3].innerHTML=` ${a.otcMedicine} medicine`
@@ -434,6 +429,8 @@ const commontabelets={
     uses: ["Depression", "Anxiety disorders", "Bulimia nervosa", "Obsessive-compulsive disorder (OCD)"],
   },
   }
+  let single_symptom=document.querySelector("#single_symptom")
+  let single_select=document.querySelector("#single_select")
   let monosym=[]
 Object.values(commontabelets).forEach((w)=>{
            w.uses.forEach((e)=>{
@@ -447,5 +444,16 @@ Object.values(commontabelets).forEach((w)=>{
       newmonosym.push(e)
     }
   })
-  console.log(monosym.length)
-  console.log(newmonosym.length)
+  select(single_select,newmonosym)
+  single_symptom.addEventListener("submit",(e)=>{
+    e.preventDefault()
+    result.childNodes[1].innerHTML="you can take "
+    result.childNodes[3].innerHTML="discription"
+    let singlesym=single_select.value
+    Object.values(commontabelets).map((e)=>{
+      if(e.uses.includes(singlesym)){
+        result.childNodes[1].innerHTML+=` ${e.name} or`
+        result.childNodes[3].innerHTML+= `<br/> ${e.description}` 
+      }
+    })
+  })

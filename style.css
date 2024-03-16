@@ -386,6 +386,14 @@ button{
     border: 1px solid rgba(255, 255, 255, 0.774);
     color: white;
 }
+  button:hover{
+    background-color: #2137dad4;
+    color: #ffffff;
+  }
+  button:active{
+    transform: translateY(4px);
+    transition: 0.5s all ease-in-out;  
+  }
 .formpage{
     width: 98vw;
     height: 45vh;
@@ -408,7 +416,7 @@ button{
     position: absolute;
     top: 4%;
     right:2%;
-    background: rgba(255, 255, 255, 0.26);
+    background: rgba(255, 255, 255, 0.941);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0);
     backdrop-filter: blur(11.6px);
@@ -420,7 +428,7 @@ button{
 .suggestions>ul{
     list-style: none;
     font-size: 1.3rem;
-    color: #f0f0f0;
+    color: #000000;
 }
 .suggestionsi{
     border-radius:50%;
@@ -449,6 +457,7 @@ button{
     border: 1px solid rgba(255, 255, 255, 0.205);
     color: white;
     flex-direction: column;
+    display: none;
     
 }
 
@@ -726,6 +735,13 @@ height: 200px;
     color: #ccc;
     padding-top: 5px;
   }
+ .single_symptom{
+  display: none;
+  }
+  .select{
+    position: relative;
+    bottom: -60px;
+  }
 
 @media  (max-width:1130px) {
     .burger{
@@ -770,6 +786,9 @@ height: 200px;
     }
     select{
         width: 98vw;
+    }
+    .page2{
+      height: 100%;
     }
     .result>div{
         font-size: 1.3rem;
@@ -821,4 +840,7 @@ height: 200px;
     
   }
     
+  }
+  .formpage{
+    display: none;
   }
