@@ -200,7 +200,119 @@
         otcMedicine: ["Moisturizers", "Topical corticosteroids", "Coal tar products"],
       }
   ];
- const commontabelets={
+
+let select1=document.querySelector("#symptoms1")
+let select2=document.querySelector("#symptoms2")
+let select3=document.querySelector("#symptoms3")
+let select4=document.querySelector("#symptoms4")
+let form =document.querySelector("#form")
+let result=document.querySelector(".result")
+
+let arry=new Array()
+diseases.forEach((a)=>{
+  for(let i=0;i<4;i++){
+  if( !arry.includes(a.symptoms[i])){
+  arry.push(a.symptoms[i])
+ 
+}}
+})
+console.log(arry.length)
+select(select1)
+select(select2)
+select(select3)
+select(select4)
+
+function select(select){
+arry.sort().forEach((a,index)=>{
+  let option=document.createElement("option")
+  // option.value=index
+  option.innerHTML=a
+  select.appendChild(option)
+ 
+})}
+
+
+form.addEventListener("submit",(e)=>{
+  e.preventDefault();
+  
+  let Array=[]
+  Array[0]=select1.value
+  Array[1]=select2.value
+  Array[2]=select3.value
+  Array[3]=select4.value
+ let arry1= removeduplicat(Array)
+  if(arry1.length<=2){
+    alert("entre atleast 3 inputs")
+  }
+  else{
+    document.querySelector(".tresult").style.display="none"
+    doctor(arry1)
+  }
+})
+
+
+
+function removeduplicat(Array){
+  let array=[]
+  Array.forEach((a)=>{
+    if(!array.includes(a)){
+      array.push(a)
+    }
+  })
+  array.sort()
+ if( array.includes("")){
+  array.shift(5)
+ }
+  
+      return array;
+}
+
+//
+function doctor(array){
+  let testd=[]
+  let finish=[]
+// console.log(array)
+  diseases.forEach((a)=>{
+    for(i=0;i<array.length;i++){
+        if(a.symptoms.includes(array[i])){
+            testd.push(a.name)
+        }
+}
+
+  })
+  testd.sort()
+  // console.log(testd)
+for(i=0;i<testd.length;i++){
+
+  if(testd[i]==testd[i+1]){
+
+    if(!finish.includes(testd[i])){
+      finish.push(testd[i])
+    }
+    }
+   
+}
+if(finish.length<=0){
+  result.childNodes[1].innerHTML="Can not find the diseas name you can select other options or better to consult the doctor "
+}
+else{
+  console.log(finish.length)
+  displaydisese(finish)
+  
+}
+}
+
+function displaydisese(array) {
+  diseases.forEach((a)=>{
+    // console.log(a.name)
+     if(array[0]==a.name){
+      result.childNodes[1].innerHTML=`you may have ${a.name} and you can take`
+      result.childNodes[3].innerHTML=` ${a.otcMedicine} medicine`
+     }
+  })
+
+}
+const commontabelets={
   paracetamol: {
     name: "Paracetamol",
     description: "Analgesic (pain reliever) and antipyretic (fever reducer)",
@@ -322,114 +434,7 @@
     uses: ["Depression", "Anxiety disorders", "Bulimia nervosa", "Obsessive-compulsive disorder (OCD)"],
   },
   }
-let select1=document.querySelector("#symptoms1")
-let select2=document.querySelector("#symptoms2")
-let select3=document.querySelector("#symptoms3")
-let select4=document.querySelector("#symptoms4")
-let form =document.querySelector("#form")
-let result=document.querySelector(".result")
-
-let arry=new Array()
-diseases.forEach((a)=>{
-  for(let i=0;i<4;i++){
-  if( !arry.includes(a.symptoms[i])){
-  arry.push(a.symptoms[i])
- 
-}}
-})
-console.log(arry.length)
-select(select1)
-select(select2)
-select(select3)
-select(select4)
-
-function select(select){
-arry.sort().forEach((a,index)=>{
-  let option=document.createElement("option")
-  // option.value=index
-  option.innerHTML=a
-  select.appendChild(option)
- 
-})}
-
-
-form.addEventListener("submit",(e)=>{
-  e.preventDefault();
-  
-  let Array=[]
-  Array[0]=select1.value
-  Array[1]=select2.value
-  Array[2]=select3.value
-  Array[3]=select4.value
- let arry1= removeduplicat(Array)
-  if(arry1.length<=2){
-    alert("entre atleast 3 inputs")
-  }
-  else{
-    document.querySelector(".tresult").style.display="none"
-    doctor(arry1)
-  }
-})
-
-
-
-function removeduplicat(Array){
-  let array=[]
-  Array.forEach((a)=>{
-    if(!array.includes(a)){
-      array.push(a)
-    }
+  let momosym=[]
+  commontabelets.forEach((e)=>{
+    console.log(e.uses)
   })
-  array.sort()
- if( array.includes("")){
-  array.shift(5)
- }
-  
-      return array;
-}
-
-//
-function doctor(array){
-  let testd=[]
-  let finish=[]
-// console.log(array)
-  diseases.forEach((a)=>{
-    for(i=0;i<array.length;i++){
-        if(a.symptoms.includes(array[i])){
-            testd.push(a.name)
-        }
-}
-
-  })
-  testd.sort()
-  // console.log(testd)
-for(i=0;i<testd.length;i++){
-
-  if(testd[i]==testd[i+1]){
-
-    if(!finish.includes(testd[i])){
-      finish.push(testd[i])
-    }
-    }
-   
-}
-if(finish.length<=0){
-  result.childNodes[1].innerHTML="Can not find the diseas name you can select other options or better to consult the doctor "
-}
-else{
-  console.log(finish.length)
-  displaydisese(finish)
-  
-}
-}
-
-function displaydisese(array) {
-  diseases.forEach((a)=>{
-    // console.log(a.name)
-     if(array[0]==a.name){
-      result.childNodes[1].innerHTML=`you may have ${a.name} and you can take`
-      result.childNodes[3].innerHTML=` ${a.otcMedicine} medicine`
-     }
-  })
-
-}
