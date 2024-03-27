@@ -464,10 +464,10 @@ single_symptom.addEventListener("submit",(e)=>{
     }
   })
   for(let i=0;i<1;i++){
-    result.childNodes[1].innerHTML=` you can take ${dispaly_single_dieses[i]}  and  ${dispaly_single_dieses[i+1]}`
+    result.childNodes[1].innerHTML=` you can take ${dispaly_single_dieses[i]}  and  ${dispaly_single_dieses[i+1]||""}`
   }
   for(let i=0;i<1;i++){
-    result.childNodes[3].innerHTML=` discription  <br/>${dispaly_single_dieses[i]} and ${dispaly_single_dieses[i+1]}`
+    result.childNodes[3].innerHTML=` discription  <br/>${dispaly_single_dieses[i]} and ${dispaly_single_dieses[i+1]||" "}`
   }
    dispaly_single_dieses=[]
    dispaly_single_discription=[]
