@@ -843,4 +843,9 @@ height: 200px;
   }
     
   }
-  
+  .result{
+    overflow: auto;
+  }
+  .result>div{
+    font-size: 0.9rem;
+  }
